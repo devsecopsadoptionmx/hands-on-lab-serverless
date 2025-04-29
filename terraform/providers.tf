@@ -22,4 +22,8 @@ terraform {
 
 provider "azurerm" {
   features {}
+  
+  # Setting this to true will skip the Azure Resource Provider registration
+  # which may be necessary if you don't have permissions to register providers
+  skip_provider_registration = true
 }
